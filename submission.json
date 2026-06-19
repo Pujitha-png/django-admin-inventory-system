@@ -1,0 +1,16 @@
+{
+  "testCredentials": {
+    "superuser": {
+      "username": "superuser",
+      "password": "superuser123!"
+    },
+    "electronicsStaff": {
+      "username": "electronics_staff",
+      "password": "electronics123!"
+    },
+    "booksStaff": {
+      "username": "books_staff",
+      "password": "books123!"
+    }
+  }
+}

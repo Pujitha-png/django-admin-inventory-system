@@ -1,0 +1,16 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<h1>Inventory Dashboard</h1>
+
+<h3>Total Inventory Value: ${{ total_value|floatformat:2 }}</h3>
+
+<h3>Top 5 Low-Stock Products:</h3>
+<ul>
+    {% for product in low_stock_products %}
+    <li><a href="{% url 'admin:inventory_product_change' product.id %}">{{ product.name }}</a> ({{ product.stock }} units)</li>
+    {% empty %}
+    <li>No low-stock products found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
